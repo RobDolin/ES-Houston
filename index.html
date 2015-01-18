@@ -40,6 +40,7 @@
           // Calculate the monthly usage for January
           monthUsage[1] = 100.5; 
           monthUsage[1] = iUsage / monthFactors[iMonth]; 
+          monthUsage[2] = monthUsage[1] * monthFactors[2]; 
           alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
