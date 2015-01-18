@@ -18,8 +18,11 @@
       var monthFactors = [1, 1.2, 1.3, 1.4, 1.5, 1.6, 0.7, 0.8, 0.9, 1.1, 1.2 ];
       
       function calculate() {
-        alert("hello");
-        
+        if (txtUsage.value.length == 0) {
+          alert("Please enter your electricity usage");
+        } else {
+          alert("Your usgae is " & txtUage.value);
+        } // end if
       } // end calculate()
 
     </script>
