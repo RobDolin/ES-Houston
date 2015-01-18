@@ -43,6 +43,12 @@
           monthUsage[2] = monthUsage[1] * monthFactors[2]; 
           alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
           alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
+          // TODO: Finish calculating predicated usage
+          
+          // TODO: Populate into page instead of as alerts
+          
+          // Choose relevant plan
+          if (monthUsage[1] <= 500) { alert("small plan"); }
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
