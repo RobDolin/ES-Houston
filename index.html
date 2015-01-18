@@ -38,8 +38,8 @@
           alert("Your monthly bill is from month " + iMonth.toString() );
           
           // Calculate the monthly usage for January
-          monthUsage[1] = iUsage / monthFactors[iMonth]; 
-          alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
+          // monthUsage[1] = iUsage / monthFactors[iMonth]; 
+          // alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
@@ -91,7 +91,7 @@
             <option value="12">December</option>
           </select> &nbsp;
           Usage: <input id="txtUsage" type="text" /> kwh &nbsp; 
-          <input id="btnSubmit" type="submit"onClick="Alert('hello');Calculate();" value="Calculate" />
+          <input id="btnSubmit" type="submit"onClick="Test();" value="Calculate" />
         </p>
         
         <h3>
