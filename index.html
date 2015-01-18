@@ -15,7 +15,8 @@
 
     <script language="javascript">
       
-      var monthFactors = [1, 1.2, 1.3, 1.4, 1.5, 1.6, 0.7, 0.8, 0.9, 1.1, 1.2 ];
+      var monthFactors = [0, 1, 1.2, 1.3, 1.4, 1.5, 1.6, 0.7, 0.8, 0.9, 1.1, 1.2 ]; // factor 0 is not used
+      var monthUsage = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2]; // month 0 is not used
       
       function calculate() {
         if (txtUsage.value.length == 0) {
@@ -31,6 +32,10 @@
           var iMonth = 0;
           iMonth = parseInt( slcMonth.value );
           alert("Your monthly bill is from month " + iMonth.toString() );
+          
+          // Calculate the monthly usage for January
+          monthUsage[1] = iUsage / monthFactors[iMonth]; 
+          alert("Your predicted usage for January is: " monthUsage[1].toString() ); 
           
         } // end if
         
