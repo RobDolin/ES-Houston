@@ -21,7 +21,18 @@
         if (txtUsage.value.length == 0) {
           alert("Please enter your electricity usage");
         } else {
-          alert("Your usage is ");
+          
+          // Put usage text input into iUsage integer variable
+          // TODO: handle non-number and non-integer input
+          var iUsage = 0;
+          iUsage = parseInt( txtUsage.value );
+          alert("Your usage is: " & iUsage.toString() & " kwh");
+          
+          var iMonth = 0;
+          iMonth = parseInt( slcMonth.value );
+          alert("Your monthly bill is from month " & iMonth.toString() );
+          
+          // alert("Your usage is ");
           // & txtUsage.value.toString() & " for the month of " & slcMonth.value.toString() );
         } // end if
       } // end calculate()
