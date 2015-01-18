@@ -13,6 +13,17 @@
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <script language="javascript">
+      
+      var monthFactors = [1, 1.2, 1.3, 1.4, 1.5, 1.6, 0.7, 0.8, 0.9, 1.1, 1.2 ];
+      
+      function calculate() {
+        alert("hello");
+        
+      } // end calculate()
+
+    </script>
+
   </head>
   <body>
 
@@ -47,7 +58,7 @@
             <option value="5">May</option>
           </select> &nbsp;
           Usage: <input id="txtUsage" type="text" /> kwh &nbsp; 
-          <button id="btnCalc" type="submit" onClick="javascript:alert('hello');">Calculate</button>
+          <button id="btnCalc" type="submit" onClick="javascript:alert('hello');calculate();">Calculate</button>
         </p>
         
         <h3>
