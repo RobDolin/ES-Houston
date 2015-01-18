@@ -21,7 +21,7 @@
         if (txtUsage.value.length == 0) {
           alert("Please enter your electricity usage");
         } else {
-          alert("Your usgae is " & txtUage.value);
+          alert("Your usage is " & txtUsage.value);
         } // end if
       } // end calculate()
 
@@ -59,9 +59,16 @@
             <option value="3">March</option>
             <option value="4">April</option>
             <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
           </select> &nbsp;
           Usage: <input id="txtUsage" type="text" /> kwh &nbsp; 
-          <button id="btnCalc" type="submit" onClick="javascript:alert('hello');calculate();">Calculate</button>
+          <button id="btnCalc" type="submit" onClick="javascript:calculate();">Calculate</button>
         </p>
         
         <h3>
