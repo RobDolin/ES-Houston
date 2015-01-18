@@ -15,7 +15,7 @@
 
     <script type="text/javascript" charset="utf-8">
       
-      var monthFactors = [ 0, 1, 1.2, 1.3, 1.4, 1.5, 1.6, 0.7, 0.8, 0.9, 1.1, 1.2 ]; // factor 0 is not used
+      var monthFactors = [ 0, 1, 0.8843, 0.7443, 0.6890, 0.8407, 1.1526, 1.3285, 1.4124, 1.1787, 0.8444, 0.67892, 0.8633 ]; // factor 0 is not used
       var monthUsage = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
       
       function Test() {
@@ -48,7 +48,19 @@
           // TODO: Populate into page instead of as alerts
           
           // Choose relevant plan
-          if (monthUsage[1] <= 500) { alert("small plan"); }
+          if (monthUsage[1] <= 500) { 
+            alert("Recommended plan: ACME Energy small plan"); 
+          } else {
+            if (monthUsage[1] <= 2000) {
+              alert("Recommended plan: Blueberry Energy happy home plan");
+            } else {
+              if (monthUsage[1] <= 5000) {
+                alert("Recommended plan: Giga Energy gargantuan plan");
+              } else {
+                alert("Are you really using more than 5,000 kwh per month?");
+              } // end else
+            } // end else
+          } // end else
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
