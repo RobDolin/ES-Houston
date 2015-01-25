@@ -45,6 +45,9 @@
           alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
           // TODO: Finish calculating predicated usage
           
+          // Show table
+          dvTable.style.display = "inline";
+          
           // TODO: Populate into page instead of as alerts
           
           // Choose relevant plan
@@ -120,8 +123,8 @@
         
         <p>TODO: Add text here.</p>
         
-        <div id="dvTable">
-          <h2>Projected Usage</h2>
+        <div id="dvTable" style="display:none;">
+          <h3>Projected Usage</h3>
           <table>
             <tr>
               <td><b>Month</b></td>
