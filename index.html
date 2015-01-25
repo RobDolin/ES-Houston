@@ -53,7 +53,7 @@
           // Choose relevant plan
           if (monthUsage[1] <= 500) { 
             alert("Recommended plan: ACME Energy small plan");
-            dvRecommendedPlan.innerHtml = "ACME Energy small plan";
+            document.getElementById("dvRecommendedPlan").innerHtml = "ACME Energy small plan";
           } else {
             if (monthUsage[1] <= 2000) {
               alert("Recommended plan: Blueberry Energy happy home plan");
