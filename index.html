@@ -54,11 +54,12 @@
           if (monthUsage[1] <= 500) { 
             alert("Recommended plan: ACME Energy small plan");
             document.getElementById("dvRecommendedPlan").innerText = "ACME Energy small plan";
-            alert("Recommended plan: ACME Energy small plan");
-            alert( document.getElementById("dvRecommendedPlan").innerText ); 
+            // alert("Recommended plan: ACME Energy small plan");
+            // alert( document.getElementById("dvRecommendedPlan").innerText ); 
           } else {
             if (monthUsage[1] <= 2000) {
               alert("Recommended plan: Blueberry Energy happy home plan");
+              document.getElementById("dvRecommendedPlan").innerText = "Blueberry Energy happy home plan";
             } else {
               if (monthUsage[1] <= 5000) {
                 alert("Recommended plan: Giga Energy gargantuan plan");
@@ -128,7 +129,10 @@
         
         <div id="dvResults" style="display:none;">
           <h3>Recommended Plan</h3>
-          <div id="dvRecommendedPlan">Test</div>
+          <p>
+            <div id="dvRecommendedPlan">Test</div>
+          </p>
+          
           <h3>Projected Usage</h3>
           <table>
             <tr>
