@@ -31,20 +31,28 @@
           // TODO: handle non-number and non-integer input
           var iUsage = 0;
           iUsage = parseInt( txtUsage.value );
-          alert("Your usage is: " + iUsage.toString() + " kwh");
+          // alert("Your usage is: " + iUsage.toString() + " kwh");
           
           var iMonth = 0;
           iMonth = parseInt( slcMonth.value );
-          alert("Your monthly bill is from month " + iMonth.toString() );
+          // alert("Your monthly bill is from month " + iMonth.toString() );
           
           // Calculate the monthly usage for January
           // monthUsage[1] = 100.5; 
           monthUsage[1] = iUsage / monthFactors[iMonth]; 
           monthUsage[2] = monthUsage[1] * monthFactors[2]; 
-          alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
-          alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
+          monthUsage[3] = monthUsage[1] * monthFactors[3]; 
+          monthUsage[4] = monthUsage[1] * monthFactors[4]; 
+          monthUsage[5] = monthUsage[1] * monthFactors[5]; 
+          monthUsage[6] = monthUsage[1] * monthFactors[6]; 
+          // alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
+          // alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
           document.getElementById("usage1").innerText = monthUsage[1].toString();
           document.getElementById("usage2").innerText = monthUsage[2].toString();
+          document.getElementById("usage3").innerText = monthUsage[3].toString();
+          document.getElementById("usage4").innerText = monthUsage[4].toString();
+          document.getElementById("usage5").innerText = monthUsage[5].toString();
+          document.getElementById("usage6").innerText = monthUsage[6].toString();
           // TODO: Finish calculating predicated usage
           
           // Show results
@@ -161,6 +169,27 @@
             <tr>
               <td>March</td>
               <td id="usage3">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>April</td>
+              <td id="usage4">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>May</td>
+              <td id="usage5">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>June</td>
+              <td id="usage6">&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
