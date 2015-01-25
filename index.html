@@ -43,6 +43,8 @@
           monthUsage[2] = monthUsage[1] * monthFactors[2]; 
           alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
           alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
+          document.getElementById("usage1").innerText = monthUsage[1].toString();
+          document.getElementById("usage2").innerText = monthUsage[2].toString();
           // TODO: Finish calculating predicated usage
           
           // Show results
@@ -52,19 +54,19 @@
           
           // Choose relevant plan
           if (monthUsage[1] <= 500) { 
-            alert("Recommended plan: ACME Energy small plan");
-            document.getElementById("dvRecommendedPlan").innerText = "ACME Energy small plan";
             // alert("Recommended plan: ACME Energy small plan");
-            // alert( document.getElementById("dvRecommendedPlan").innerText ); 
+            document.getElementById("dvRecommendedPlan").innerText = "ACME Energy small plan";
           } else {
             if (monthUsage[1] <= 2000) {
-              alert("Recommended plan: Blueberry Energy happy home plan");
+              // alert("Recommended plan: Blueberry Energy happy home plan");
               document.getElementById("dvRecommendedPlan").innerText = "Blueberry Energy happy home plan";
             } else {
               if (monthUsage[1] <= 5000) {
                 alert("Recommended plan: Giga Energy gargantuan plan");
+                document.getElementById("dvRecommendedPlan").innerText = "Giga Energy gargantuan plan";
               } else {
-                alert("Are you really using more than 5,000 kwh per month?");
+                // alert("Are you really using more than 5,000 kwh per month?");
+                document.getElementById("dvRecommendedPlan").innerText = "Check your bill to make sure you're really using over 5,000 kwh per month";
               } // end else
             } // end else
           } // end else
@@ -125,7 +127,7 @@
         <h3>
         <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>How it works</h3>
         
-        <p>Enter your electricity usage from one of your recent bills above to get a personalized recommendation from Energy </p>
+        <p>Enter your electricity usage from one of your recent bills above to get a customized recommendation from Energy Simply</p>
         
         <div id="dvResults" style="display:none;">
           <h3>Recommended Plan</h3>
@@ -150,15 +152,15 @@
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <td id="usage2">February</td>
-              <td>&nbsp;</td>
+              <td>February</td>
+              <td id="usage2">&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td>March</td>
-              <td>&nbsp;</td>
+              <td id="usage3">&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
