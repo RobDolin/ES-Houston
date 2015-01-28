@@ -53,8 +53,8 @@
           monthUsage[12] = monthUsage[1] * monthFactors[12]; 
           // alert("Your predicted usage for January is: " + monthUsage[1].toString() ); 
           // alert("Your predicted usage for February is: " + monthUsage[2].toString() ); 
-          document.getElementById("usage1").innerText = monthUsage[1].toString();
-          document.getElementById("usage2").innerText = monthUsage[2].toString();
+          document.getElementById("usage1").innerText = math.round( monthUsage[1] ).toString();
+          document.getElementById("usage2").innerText = math.round( monthUsage[2] ).toString();
           document.getElementById("usage3").innerText = monthUsage[3].toString();
           document.getElementById("usage4").innerText = monthUsage[4].toString();
           document.getElementById("usage5").innerText = monthUsage[5].toString();
