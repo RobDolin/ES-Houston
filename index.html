@@ -73,17 +73,17 @@
           // TODO: Populate into page instead of as alerts
           
           // Choose relevant plan
-          if (monthUsage[1] <= 500) { 
-            // alert("Recommended plan: ACME Energy small plan");
-            document.getElementById("dvRecommendedPlan").innerText = "ACME Energy small plan";
+          if (monthUsage[1] <= 750) { 
+            // alert("Recommended plan: Small");
+            document.getElementById("dvRecommendedPlan").innerText = "PENNYWISE POWER - Wise Buy Conserve 6";
           } else {
-            if (monthUsage[1] <= 2000) {
-              // alert("Recommended plan: Blueberry Energy happy home plan");
-              document.getElementById("dvRecommendedPlan").innerText = "Blueberry Energy happy home plan";
+            if (monthUsage[1] <= 950) {
+              // alert("Recommended plan: Medium");
+              document.getElementById("dvRecommendedPlan").innerText = "GREEN MOUNTAIN ENERGY COMPANY	- Pollution Free 3 Choice";
             } else {
               if (monthUsage[1] <= 5000) {
-                alert("Recommended plan: Giga Energy gargantuan plan");
-                document.getElementById("dvRecommendedPlan").innerText = "Giga Energy gargantuan plan";
+                // alert("Recommended plan: Large");
+                document.getElementById("dvRecommendedPlan").innerText = "CIRRO ENERGY - Smart Saver 3";
               } else {
                 // alert("Are you really using more than 5,000 kwh per month?");
                 document.getElementById("dvRecommendedPlan").innerText = "Check your bill to make sure you're really using over 5,000 kwh per month";
