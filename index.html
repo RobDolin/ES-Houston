@@ -42,6 +42,10 @@
           iBillx100 = parseInt( txtBill.value * 100 );
           alert("Your bill for that month was: " + iBillx100.toString() );
           
+          var CostPerKWH = 0;
+          CostPerKWH = iBillx100 / (iUsage * 100);
+          alert("Your cost per kwh was: " + CostPerKWH.toString() );
+          
           // Calculate the monthly usage for January
           // monthUsage[1] = 100.5; 
           monthUsage[1] = iUsage / monthFactors[iMonth]; 
