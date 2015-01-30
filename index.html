@@ -17,6 +17,7 @@
       
       var monthFactors = [ 0, 1, 0.8843, 0.7443, 0.6890, 0.8407, 1.1526, 1.3285, 1.4124, 1.1787, 0.8444, 0.67892, 0.8633 ]; // factor 0 is not used
       var monthUsage = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
+      var monthCurrentCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
       
       function Test() {
         alert("test");
@@ -36,6 +37,10 @@
           var iMonth = 0;
           iMonth = parseInt( slcMonth.value );
           // alert("Your monthly bill is from month " + iMonth.toString() );
+          
+          var iBillx100 = 0;
+          iBillx100 = parseInt( txtBill.value * 100 );
+          alert("Your bill for that month was: " + iBillx100.toString() );
           
           // Calculate the monthly usage for January
           // monthUsage[1] = 100.5; 
@@ -231,6 +236,7 @@
         
         <p> 
           Usage: <input id="txtUsage" type="text" /> kwh &nbsp; 
+          Bill: $<input id="txtBill" type="text" /> &nbsp; 
           Month: <select id="slcMonth">
             <option value="1">January</option>
             <option value="2">February</option>
