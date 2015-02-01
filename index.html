@@ -142,18 +142,17 @@
           
           // Calcuate monthly bill
           
-          for (i=0; i<2; i++) {
+          for (i=0; i<3; i++) {
             alert(i);
           }
           
-          /*
-          int iMonthIterator = 0;
-          for (iMonthIterator = 1; iMonthIterator < 3; iMonthIterator++) {
+          for (iMonthIterator=1; iMonthIterator<3; iMonthIterator++) {
             monthProposedCost[1] = FixedCost + monthUsage[1] * VariableCost;
             if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost[1] - LowUseRebate; }
             if (monthUsage[1] < LowUseChargeThreshold) { monthProposedCost[1] = monthProposedCost[1] + LowUseCharge; }
             alert ("Proposed monthly bill: " + "$" + Math.round( monthProposedCost[1] ).toString() );
           }
+          /*
           */
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
