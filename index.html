@@ -141,7 +141,7 @@
           } // end else
           
           // Calcuate monthly bill
-          into iMonthIterator = 0;
+          int iMonthIterator = 0;
           for (iMonthIterator = 1; iMonthIterator < 3; iMonthIterator++) {
             monthProposedCost[1] = FixedCost + monthUsage[1] * VariableCost;
             if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost[1] - LowUseRebate; }
