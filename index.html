@@ -153,8 +153,12 @@
             monthProposedSavings[iMonthIterator] =  monthCurrentCost[iMonthIterator] - monthProposedCost[iMonthIterator]
             alert ("Proposed monthly savings: " + "$" + Math.round( monthProposedSavings[iMonthIterator] ).toString() );
           }
-          /*
-          */
+
+          // Display the proposed plan monthly bill and proposed montlhy savings
+          document.getElementById("proposed1").innerText = "$" + Math.round( monthProposedCost[1] ).toString();
+          document.getElementById("proposed2").innerText = "$" + Math.round( monthProposedCost[2] ).toString();
+          document.getElementById("savings1").innerText = "$" + Math.round( monthProposedSavings[1] ).toString();
+          document.getElementById("savings2").innerText = "$" + Math.round( monthProposedSavings[2] ).toString();
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
@@ -203,15 +207,15 @@
               <td>January</td>
               <td id="usage1" style="text-align:right;">&nbsp;</td>
               <td id="current1" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed1" style="text-align:right;">&nbsp;</td>
+              <td id="savings1" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>February</td>
               <td id="usage2" style="text-align:right;">&nbsp;</td>
               <td id="current2" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed2" style="text-align:right;">&nbsp;</td>
+              <td id="savings2" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>March</td>
