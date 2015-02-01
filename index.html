@@ -112,8 +112,8 @@
           VariableCost = 0.0;
           LowUseRebate = 0.0;
           LowUseRebateThreshold = 0;
-          LowUseChage = 0.0;
-          LowUseChartThreshold = 0;
+          LowUseCharge = 0.0;
+          LowUseChargeThreshold = 0;
           
           // Choose relevant plan
           if (monthUsage[1] <= 750) { 
@@ -127,6 +127,8 @@
             if (monthUsage[1] <= 950) {
               // alert("Recommended plan: Medium");
               document.getElementById("dvRecommendedPlan").innerText = "GREEN MOUNTAIN ENERGY COMPANY	- Pollution Free 3 Choice";
+              FixedCost = 8.72;
+              VariableCost = 0.069;
             } else {
               if (monthUsage[1] <= 5000) {
                 // alert("Recommended plan: Large");
@@ -139,13 +141,7 @@
           } // end else
           
           // Calcuate monthly bill
-/*           FixedCost = 0.0;
-          VariableCost = 0.0;
-          LowUseRebate = 0.0;
-          LowUseRebateThreshold = 0;
-          LowUseCharge = 0.0;
-          LowUseChargeThreshold = 0;
-*/
+
           monthProposedCost[1] = FixedCost + monthUsage[1] * VariableCost;
           alert ("1");
           if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost[1] - LowUseRebate; }
