@@ -145,20 +145,40 @@
           } // end else
           
           // Calcuate monthly bill
-          for (iMonthIterator=1; iMonthIterator<3; iMonthIterator++) {
+          for (iMonthIterator=1; iMonthIterator<13; iMonthIterator++) {
             monthProposedCost[iMonthIterator] = FixedCost + monthUsage[iMonthIterator] * VariableCost;
             if (monthUsage[iMonthIterator] < LowUseRebateThreshold) { monthProposedCost[iMonthIterator] = monthProposedCost[iMonthIterator] - LowUseRebate; }
             if (monthUsage[iMonthIterator] < LowUseChargeThreshold) { monthProposedCost[iMonthIterator] = monthProposedCost[iMonthIterator] + LowUseCharge; }
-            alert ("Proposed monthly bill: " + "$" + Math.round( monthProposedCost[iMonthIterator] ).toString() );
+            // alert ("Proposed monthly bill: " + "$" + Math.round( monthProposedCost[iMonthIterator] ).toString() );
             monthProposedSavings[iMonthIterator] =  monthCurrentCost[iMonthIterator] - monthProposedCost[iMonthIterator]
-            alert ("Proposed monthly savings: " + "$" + Math.round( monthProposedSavings[iMonthIterator] ).toString() );
+            // alert ("Proposed monthly savings: " + "$" + Math.round( monthProposedSavings[iMonthIterator] ).toString() );
           }
 
           // Display the proposed plan monthly bill and proposed montlhy savings
           document.getElementById("proposed1").innerText = "$" + Math.round( monthProposedCost[1] ).toString();
           document.getElementById("proposed2").innerText = "$" + Math.round( monthProposedCost[2] ).toString();
+          document.getElementById("proposed3").innerText = "$" + Math.round( monthProposedCost[3] ).toString();
+          document.getElementById("proposed4").innerText = "$" + Math.round( monthProposedCost[4] ).toString();
+          document.getElementById("proposed5").innerText = "$" + Math.round( monthProposedCost[5] ).toString();
+          document.getElementById("proposed6").innerText = "$" + Math.round( monthProposedCost[6] ).toString();
+          document.getElementById("proposed7").innerText = "$" + Math.round( monthProposedCost[7] ).toString();
+          document.getElementById("proposed8").innerText = "$" + Math.round( monthProposedCost[8] ).toString();
+          document.getElementById("proposed9").innerText = "$" + Math.round( monthProposedCost[9] ).toString();
+          document.getElementById("proposed10").innerText = "$" + Math.round( monthProposedCost[10] ).toString();
+          document.getElementById("proposed11").innerText = "$" + Math.round( monthProposedCost[11] ).toString();
+          document.getElementById("proposed12").innerText = "$" + Math.round( monthProposedCost[12] ).toString();
           document.getElementById("savings1").innerText = "$" + Math.round( monthProposedSavings[1] ).toString();
           document.getElementById("savings2").innerText = "$" + Math.round( monthProposedSavings[2] ).toString();
+          document.getElementById("savings3").innerText = "$" + Math.round( monthProposedSavings[3] ).toString();
+          document.getElementById("savings4").innerText = "$" + Math.round( monthProposedSavings[4] ).toString();
+          document.getElementById("savings5").innerText = "$" + Math.round( monthProposedSavings[5] ).toString();
+          document.getElementById("savings6").innerText = "$" + Math.round( monthProposedSavings[6] ).toString();
+          document.getElementById("savings7").innerText = "$" + Math.round( monthProposedSavings[7] ).toString();
+          document.getElementById("savings8").innerText = "$" + Math.round( monthProposedSavings[8] ).toString();
+          document.getElementById("savings9").innerText = "$" + Math.round( monthProposedSavings[9] ).toString();
+          document.getElementById("savings10").innerText = "$" + Math.round( monthProposedSavings[10] ).toString();
+          document.getElementById("savings11").innerText = "$" + Math.round( monthProposedSavings[11] ).toString();
+          document.getElementById("savings12").innerText = "$" + Math.round( monthProposedSavings[12] ).toString();
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
@@ -221,71 +241,71 @@
               <td>March</td>
               <td id="usage3" style="text-align:right;">&nbsp;</td>
               <td id="current3" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed3" style="text-align:right;">&nbsp;</td>
+              <td id="savings3" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>April</td>
               <td id="usage4" style="text-align:right;">&nbsp;</td>
               <td id="current4" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed4" style="text-align:right;">&nbsp;</td>
+              <td id="savings4" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>May</td>
               <td id="usage5" style="text-align:right;">&nbsp;</td>
               <td id="current5" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed5" style="text-align:right;">&nbsp;</td>
+              <td id="savings5" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>June</td>
               <td id="usage6" style="text-align:right;">&nbsp;</td>
               <td id="current6" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed6" style="text-align:right;">&nbsp;</td>
+              <td id="savings6" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>July</td>
               <td id="usage7" style="text-align:right;">&nbsp;</td>
               <td id="current7" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed7" style="text-align:right;">&nbsp;</td>
+              <td id="savings7" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>August</td>
               <td id="usage8" style="text-align:right;">&nbsp;</td>
               <td id="current8" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed8" style="text-align:right;">&nbsp;</td>
+              <td id="savings8" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>September</td>
               <td id="usage9" style="text-align:right;">&nbsp;</td>
               <td id="current9" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed9" style="text-align:right;">&nbsp;</td>
+              <td id="savings9" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>October</td>
               <td id="usage10" style="text-align:right;">&nbsp;</td>
               <td id="current10" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed10" style="text-align:right;">&nbsp;</td>
+              <td id="savings10" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>November</td>
               <td id="usage11" style="text-align:right;">&nbsp;</td>
               <td id="current11" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed11" style="text-align:right;">&nbsp;</td>
+              <td id="savings11" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
               <td>December</td>
               <td id="usage12" style="text-align:right;">&nbsp;</td>
               <td id="current12" style="text-align:right;">&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td id="proposed12" style="text-align:right;">&nbsp;</td>
+              <td id="savings12" style="text-align:right;">&nbsp;</td>
             </tr>
           </table>
         </div>
