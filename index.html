@@ -133,6 +133,10 @@
               if (monthUsage[1] <= 5000) {
                 // alert("Recommended plan: Large");
                 document.getElementById("dvRecommendedPlan").innerText = "CIRRO ENERGY - Smart Saver 3";
+                FixedCost = 8.72;
+                VariableCost = 0.056;
+                LowUseCharge = 9.95;
+                LowUseChargeThreshold = 1000;
               } else {
                 // alert("Are you really using more than 5,000 kwh per month?");
                 document.getElementById("dvRecommendedPlan").innerText = "Check your bill to make sure you're really using over 5,000 kwh per month";
