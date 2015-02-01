@@ -141,11 +141,13 @@
           } // end else
           
           // Calcuate monthly bill
-          for (iMonthIterator=1; iMonthIterator<12; iMonthIterator++) {
+          for (iMonthIterator=1; iMonthIterator<3; iMonthIterator++) {
             monthProposedCost[iMonthIterator] = FixedCost + monthUsage[iMonthIterator] * VariableCost;
             if (monthUsage[iMonthIterator] < LowUseRebateThreshold) { monthProposedCost[iMonthIterator] = monthProposedCost[iMonthIterator] - LowUseRebate; }
             if (monthUsage[iMonthIterator] < LowUseChargeThreshold) { monthProposedCost[iMonthIterator] = monthProposedCost[iMonthIterator] + LowUseCharge; }
             alert ("Proposed monthly bill: " + "$" + Math.round( monthProposedCost[iMonthIterator] ).toString() );
+            monthProposedSavings[iMonthIterator] =  monthCurrentCost[iMonthIterator] - monthProposedCost[iMonthIterator]
+            alert ("Proposed monthly savings: " + "$" + Math.round( monthProposedSavings[iMonthIterator] ).toString() );
           }
           /*
           */
