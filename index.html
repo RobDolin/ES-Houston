@@ -17,7 +17,9 @@
       
       var monthFactors = [ 0, 1, 0.8843, 0.7443, 0.6890, 0.8407, 1.1526, 1.3285, 1.4124, 1.1787, 0.8444, 0.67892, 0.8633 ]; // factor 0 is not used
       var monthUsage = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
-      var monthCurrentCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
+      var monthCurrentCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not uPsed
+      var monthProposedCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
+      var monthProposedSavings = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
       
       function Test() {
         alert("test");
@@ -137,7 +139,17 @@
           } // end else
           
           // Calcuate monthly bill
-          alert ("Jan: " + (FixedCost + monthUsage[1] * VariableCost).toString() );
+/*           FixedCost = 0.0;
+          VariableCost = 0.0;
+          LowUseRebate = 0.0;
+          LowUseRebateThreshold = 0;
+          LowUseCharge = 0.0;
+          LowUseChargeThreshold = 0;
+*/
+          monthProposedCost[1] = FixedCost + monthUsage[1] * VariableCost;
+          if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost - LowUseRebate; }
+          if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost + LowUseCharge; }
+          alert ("Jan: " + "$" + Math.round( monthProposedCost[1] ).toString() );
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
