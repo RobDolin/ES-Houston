@@ -23,7 +23,7 @@
       var yearUsage = 0.0;
       var yearCurrentCost = 0.0;
       var yearProposedCost = 0.0;
-      var yearPrposedSavings = 0.0;
+      var yearProposedSavings = 0.0;
       
       function Test() {
         alert("test");
@@ -189,8 +189,12 @@
             yearUsage = yearUsage + monthUsage[iMonthIterator];
             yearCurrentCost = yearCurrentCost + monthCurrentCost[iMonthIterator];
             yearProposedCost = yearProposedCost + monthProposedCost[iMonthIterator];
-            yearPrposedSavings = yearPrposedSavings + monthProposedSavings[iMonthIterator];
+            yearProposedSavings = yearProposedSavings + monthProposedSavings[iMonthIterator];
           }
+          document.getElementById("usageYearCell").innerText = "$" + Math.round( yearUsage ).toString();
+          document.getElementById("currentYearCell").innerText = "$" + Math.round( yearCurrentCost ).toString();
+          document.getElementById("proposedYearCell").innerText = "$" + Math.round( yearProposedCost ).toString();
+          document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
           alert(yearUsage);
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
@@ -319,6 +323,13 @@
               <td id="current12" style="text-align:right;">&nbsp;</td>
               <td id="proposed12" style="text-align:right;">&nbsp;</td>
               <td id="savings12" style="text-align:right;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td><b>Estimated for Year</b></td>
+              <td id="usageYearCell" style="text-align:right;">&nbsp;</td>
+              <td id="currentYearCell" style="text-align:right;">&nbsp;</td>
+              <td id="proposedYearCell" style="text-align:right;">&nbsp;</td>
+              <td id="savingsYearCell" style="text-align:right;">&nbsp;</td>
             </tr>
           </table>
         </div>
