@@ -105,10 +105,22 @@
           
           // TODO: Populate into page instead of as alerts
           
+          // Set-up variables for calculating power
+          FixedCost = 0.0;
+          VariableCost = 0.0;
+          LowUseRebate = 0.0;
+          LowUseRebateThreshold = 0;
+          LowUseChage = 0.0;
+          LowUseChartThreshold = 0;
+          
           // Choose relevant plan
           if (monthUsage[1] <= 750) { 
             // alert("Recommended plan: Small");
             document.getElementById("dvRecommendedPlan").innerText = "PENNYWISE POWER - Wise Buy Conserve 6";
+            FixedCost = 8.72;
+            VariableCost = 0.112;
+            LowUseRebate = 40.0;
+            LowUseRebateThreshold = 1000;
           } else {
             if (monthUsage[1] <= 950) {
               // alert("Recommended plan: Medium");
@@ -123,6 +135,9 @@
               } // end else
             } // end else
           } // end else
+          
+          // Calcuate monthly bill
+          alert ("Jan: " + (FixedCost + monthUsage[1] * VariableCost).toString() );
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
