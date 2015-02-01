@@ -185,6 +185,10 @@
           document.getElementById("savings12").innerText = "$" + Math.round( monthProposedSavings[12] ).toString();
           
           // Calculate totals for year
+          yearUsage = 0.0;
+          yearCurrentCost = 0.0;
+          yearProposedCost = 0.0;
+          yearProposedSavings = 0.0;
           for (iMonthIterator=1; iMonthIterator<13; iMonthIterator++) {
             yearUsage = yearUsage + monthUsage[iMonthIterator];
             yearCurrentCost = yearCurrentCost + monthCurrentCost[iMonthIterator];
