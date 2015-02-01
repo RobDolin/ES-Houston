@@ -191,8 +191,8 @@
             yearProposedCost = yearProposedCost + monthProposedCost[iMonthIterator];
             yearProposedSavings = yearProposedSavings + monthProposedSavings[iMonthIterator];
           }
-          document.getElementById("usageYearCell").innerText = "$" + Math.round( yearUsage ).toString();
-          document.getElementById("currentYearCell").innerText = "$" + Math.round( yearCurrentCost ).toString();
+          document.getElementById("usageYearCell").innerText = "<b>" +  Math.round( yearUsage ).toString() + "</b>";
+          document.getElementById("currentYearCell").innerText = "<b>$" + Math.round( yearCurrentCost ).toString() + "</b>";
           document.getElementById("proposedYearCell").innerText = "$" + Math.round( yearProposedCost ).toString();
           document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
           alert(yearUsage);
@@ -325,7 +325,7 @@
               <td id="savings12" style="text-align:right;">&nbsp;</td>
             </tr>
             <tr>
-              <td><b>Estimated for Year</b></td>
+              <td><b>Full Year</b></td>
               <td id="usageYearCell" style="text-align:right;">&nbsp;</td>
               <td id="currentYearCell" style="text-align:right;">&nbsp;</td>
               <td id="proposedYearCell" style="text-align:right;">&nbsp;</td>
