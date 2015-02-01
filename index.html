@@ -191,11 +191,11 @@
             yearProposedCost = yearProposedCost + monthProposedCost[iMonthIterator];
             yearProposedSavings = yearProposedSavings + monthProposedSavings[iMonthIterator];
           }
-          document.getElementById("usageYearCell").innerText = "<b>" +  Math.round( yearUsage ).toString() + "</b>";
-          document.getElementById("currentYearCell").innerText = "<b>$" + Math.round( yearCurrentCost ).toString() + "</b>";
+          document.getElementById("usageYearCell").innerText = Math.round( yearUsage ).toString();
+          document.getElementById("currentYearCell").innerText = "$" + Math.round( yearCurrentCost ).toString();
           document.getElementById("proposedYearCell").innerText = "$" + Math.round( yearProposedCost ).toString();
           document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
-          alert(yearUsage);
+          // alert(yearUsage);
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
@@ -326,7 +326,7 @@
             </tr>
             <tr>
               <td><b>Full Year</b></td>
-              <td id="usageYearCell" style="text-align:right;">&nbsp;</td>
+              <td id="usageYearCell" style="text-align:right;"><b>&nbsp;</b></td>
               <td id="currentYearCell" style="text-align:right;">&nbsp;</td>
               <td id="proposedYearCell" style="text-align:right;">&nbsp;</td>
               <td id="savingsYearCell" style="text-align:right;">&nbsp;</td>
