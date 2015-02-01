@@ -20,6 +20,10 @@
       var monthCurrentCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not uPsed
       var monthProposedCost = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
       var monthProposedSavings = [ 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2 ]; // month 0 is not used
+      var yearUsage = 0.0;
+      var yearCurrentCost = 0.0;
+      var yearProposedCost = 0.0;
+      var yearPrposedSavings = 0.0;
       
       function Test() {
         alert("test");
@@ -179,6 +183,15 @@
           document.getElementById("savings10").innerText = "$" + Math.round( monthProposedSavings[10] ).toString();
           document.getElementById("savings11").innerText = "$" + Math.round( monthProposedSavings[11] ).toString();
           document.getElementById("savings12").innerText = "$" + Math.round( monthProposedSavings[12] ).toString();
+          
+          // Calculate totals for year
+          for (iMonthIterator=1; iMonthIterator<13; iMonthIterator++) {
+            yearUsage = yearUsage + monthUsage[iMonthIterator];
+            yearCurrentCost = yearCurrentCost + monthCurrentCost[iMonthIterator];
+            yearProposedCost = yearProposedCost + monthProposedCost[iMonthIterator];
+            yearPrposedSavings = yearPrposedSavings + monthProposedSavings[iMonthIterator];
+          }
+          alert(yearUsage);
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
