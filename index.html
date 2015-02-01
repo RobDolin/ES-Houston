@@ -147,8 +147,11 @@
           LowUseChargeThreshold = 0;
 */
           monthProposedCost[1] = FixedCost + monthUsage[1] * VariableCost;
+          alert ("1");
           if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost[1] - LowUseRebate; }
-          if (monthUsage[1] < LowUseRebateThreshold) { monthProposedCost[1] = monthProposedCost[1] + LowUseCharge; }
+          alert ("2");
+          if (monthUsage[1] < LowUseChargeThreshold) { monthProposedCost[1] = monthProposedCost[1] + LowUseCharge; }
+          alert ("3");
           alert ("Jan: " + "$" + Math.round( monthProposedCost[1] ).toString() );
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
