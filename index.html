@@ -201,7 +201,7 @@
           document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
           // alert(yearUsage);
           
-          document.getElementById("dvCostPerKWH").innerText = "$" + Math.round( yearProposedCost * 1000 / yearUsage ) / 1000;
+          document.getElementById("dvCostPerKWH").innerText = "Cost per kWh: $" + Math.round( yearProposedCost * 1000 / yearUsage ) / 1000
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
