@@ -216,6 +216,7 @@
           planUsage = 0.0;
           planProposedCost = 0.0;
           for (iMonthIterator=2; iMonthIterator<PlanTerm+2; iMonthIterator++) {
+            alert(iMonthIterator);
             planUsage = planUsage + monthUsage[iMonthIterator];
             planProposedCost = planProposedCost + monthProposedCost[iMonthIterator];
           }
