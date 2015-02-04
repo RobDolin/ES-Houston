@@ -201,6 +201,8 @@
           document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
           // alert(yearUsage);
           
+          document.getElementById("dvCostPerKWH").innerText = "$" + Math.round( yearProposedCost * 1000 / yearUsage ) / 1000;
+          
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
           
@@ -233,6 +235,7 @@
           <h3>Recommended Plan</h3>
           <p>
             <div id="dvRecommendedPlan">Test</div>
+            <div id="dvCostPerKWH"></div>
           </p>
           
           <h3>Projected Usage</h3>
