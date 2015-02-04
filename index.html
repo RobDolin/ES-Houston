@@ -92,9 +92,10 @@
           document.getElementById("usage10").innerText = Math.round( monthUsage[10] ).toString();
           document.getElementById("usage11").innerText = Math.round( monthUsage[11] ).toString();
           document.getElementById("usage12").innerText = Math.round( monthUsage[12] ).toString();
-          document.getElementById("current1").innerText = "$" + Math.round( monthCurrentCost[1] ).toString() + " ($" + Math.round( monthCurrentCost[1] * 1000 / monthUsage[1] ) * 1000 + "/kWH)";
-          document.getElementById("current2").innerText = "$" + Math.round( monthCurrentCost[2] ).toString();
-          document.getElementById("current3").innerText = "$" + Math.round( monthCurrentCost[3] ).toString();
+          document.getElementById("current1").innerText = "$" + Math.round( monthCurrentCost[1] ).toString() + " ($" + Math.round( monthCurrentCost[1] * 1000 / monthUsage[1] ) / 1000 + "/kWH)";
+          document.getElementById("current2").innerText = "$" + Math.round( monthCurrentCost[2] ).toString() + " ($" + Math.round( monthCurrentCost[2] * 1000 / monthUsage[2] ) / 1000 + "/kWH)";
+          document.getElementById("current3").innerText = "$" + Math.round( monthCurrentCost[3] ).toString() + " ($" + Math.round( monthCurrentCost[3] * 1000 / monthUsage[3] ) / 1000 + "/kWH)";
+          // document.getElementById("current3").innerText = "$" + Math.round( monthCurrentCost[3] ).toString();
           document.getElementById("current4").innerText = "$" + Math.round( monthCurrentCost[4] ).toString();
           document.getElementById("current5").innerText = "$" + Math.round( monthCurrentCost[5] ).toString();
           document.getElementById("current6").innerText = "$" + Math.round( monthCurrentCost[6] ).toString();
