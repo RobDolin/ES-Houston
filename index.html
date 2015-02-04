@@ -115,17 +115,20 @@
           // TODO: Populate into page instead of as alerts
           
           // Set-up variables for calculating power
+          PlanTerm = 0;
           FixedCost = 0.0;
           VariableCost = 0.0;
           LowUseRebate = 0.0;
           LowUseRebateThreshold = 0;
           LowUseCharge = 0.0;
           LowUseChargeThreshold = 0;
+          PlanTerm = 0;
           
           // Choose relevant plan
           if (monthUsage[1] <= 750) { 
             // alert("Recommended plan: Small");
             document.getElementById("dvRecommendedPlan").innerText = "PENNYWISE POWER - Wise Buy Conserve 6";
+            PlanTerm = 6;
             FixedCost = 8.72;
             VariableCost = 0.112;
             LowUseRebate = 40.0;
@@ -134,12 +137,14 @@
             if (monthUsage[1] <= 950) {
               // alert("Recommended plan: Medium");
               document.getElementById("dvRecommendedPlan").innerText = "GREEN MOUNTAIN ENERGY COMPANY	- Pollution Free 3 Choice";
+              PlanTerm = 3;
               FixedCost = 8.72;
               VariableCost = 0.069;
             } else {
               if (monthUsage[1] <= 5000) {
                 // alert("Recommended plan: Large");
                 document.getElementById("dvRecommendedPlan").innerText = "CIRRO ENERGY - Smart Saver 3";
+                PlanTerm = 3;
                 FixedCost = 8.72;
                 VariableCost = 0.056;
                 LowUseCharge = 9.95;
@@ -207,7 +212,15 @@
           document.getElementById("savingsYearCell").innerText = "$" + Math.round( yearProposedSavings ).toString();
           // alert(yearUsage);
           
-          document.getElementById("dvCostPerKWH").innerText = "Cost per kWh: $" + Math.round( yearProposedCost * 1000 / yearUsage ) / 1000
+          // Calcuate cost per kWh for the plan term
+          planUsage = 0.0;
+          planProposedCost = 0.0;
+          for (iMonthIterator=2; iMonthIterator<PlanTerm+2; iMonthIterator++) {
+            planUsage = planUsage + monthUsage[iMonthIterator];
+            planProposedCost = planProposedCost + monthProposedCost[iMonthIterator];
+          }
+          
+          document.getElementById("dvCostPerKWH").innerText = "Cost per kWh: $" + Math.round( planProposedCost * 1000 / planUsage ) / 1000
           
           // Change button text from "Calculcate" to "Recalculate" after first calculation 
           btnSubmit.value = "Recalculate"; 
